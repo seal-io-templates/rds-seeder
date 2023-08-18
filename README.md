@@ -33,18 +33,18 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_source_address"></a> [source\_address](#input\_source\_address) | Specify the seeding source address started with 'file://' or 'http(s)://' schema. | `string` | n/a | yes |
 | <a name="input_destination_address"></a> [destination\_address](#input\_destination\_address) | Specify the seeding destiantion address. | `string` | n/a | yes |
-| <a name="input_destination_conn_max"></a> [destination\_conn\_max](#input\_destination\_conn\_max) | Specify the connection maximum value of destination. | `number` | `5` | no |
 | <a name="input_destination_batch_cap"></a> [destination\_batch\_cap](#input\_destination\_batch\_cap) | Specify the (insertion) batch capacity value of destination. | `number` | `500` | no |
-| <a name="input_seal_metadata_project_name"></a> [seal\_metadata\_project\_name](#input\_seal\_metadata\_project\_name) | Seal metadata project name. | `string` | `""` | no |
-| <a name="input_seal_metadata_environment_name"></a> [seal\_metadata\_environment\_name](#input\_seal\_metadata\_environment\_name) | Seal metadata environment name. | `string` | `""` | no |
-| <a name="input_seal_metadata_service_name"></a> [seal\_metadata\_service\_name](#input\_seal\_metadata\_service\_name) | Seal metadata service name. | `string` | `""` | no |
+| <a name="input_destination_conn_max"></a> [destination\_conn\_max](#input\_destination\_conn\_max) | Specify the connection maximum value of destination. | `number` | `5` | no |
+| <a name="input_source_address"></a> [source\_address](#input\_source\_address) | Specify the seeding source address started with 'file://' or 'http(s)://' schema. | `string` | n/a | yes |
+| <a name="input_walrus_metadata_environment_name"></a> [walrus\_metadata\_environment\_name](#input\_walrus\_metadata\_environment\_name) | Walrus metadata environment name. | `string` | `""` | no |
+| <a name="input_walrus_metadata_project_name"></a> [walrus\_metadata\_project\_name](#input\_walrus\_metadata\_project\_name) | Walrus metadata project name. | `string` | `""` | no |
+| <a name="input_walrus_metadata_service_name"></a> [walrus\_metadata\_service\_name](#input\_walrus\_metadata\_service\_name) | Walrus metadata service name. | `string` | `""` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_id"></a> [id](#output\_id) | n/a |
 | <a name="output_cost"></a> [cost](#output\_cost) | n/a |
+| <a name="output_id"></a> [id](#output\_id) | n/a |
 <!-- END_TF_DOCS -->
