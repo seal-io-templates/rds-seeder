@@ -3,11 +3,11 @@
 #
 
 locals {
-  seal_metadata_project_name     = coalesce(var.seal_metadata_project_name, "example")
-  seal_metadata_environment_name = coalesce(var.seal_metadata_environment_name, "example")
-  seal_metadata_service_name     = coalesce(var.seal_metadata_service_name, "rdsseeder")
+  walrus_metadata_project_name     = coalesce(var.walrus_metadata_project_name, "example")
+  walrus_metadata_environment_name = coalesce(var.walrus_metadata_environment_name, "example")
+  walrus_metadata_service_name     = coalesce(var.walrus_metadata_service_name, "rdsseeder")
 
-  identifier = join("-", [local.seal_metadata_project_name, local.seal_metadata_environment_name, local.seal_metadata_service_name])
+  identifier = join("-", [local.walrus_metadata_project_name, local.walrus_metadata_environment_name, local.walrus_metadata_service_name])
 }
 
 locals {
