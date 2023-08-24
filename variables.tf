@@ -18,7 +18,7 @@ variable "source_address" {
 # @label "Destination"
 variable "destination_address" {
   type        = string
-  description = "Specify the seeding destiantion address, see: https://github.com/seal-io/terraform-provider-byteset/blob/main/docs/resources/pipeline.md#nested-schema-for-destination."
+  description = "Specify the seeding destiantion address, please refer to: https://github.com/seal-io/terraform-provider-byteset/blob/main/docs/resources/pipeline.md#nested-schema-for-destination."
 }
 
 #################
