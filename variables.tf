@@ -6,7 +6,7 @@
 # @label "Source"
 variable "source_address" {
   type        = string
-  description = "Specify the seeding source address started with 'file://' or 'http(s)://' schema."
+  description = "Specify the seeding source address started with 'file://' or 'http(s)://' schema, such as: https://raw.githubusercontent.com/seal-io/terraform-provider-byteset/main/byteset/testdata/mysql.sql."
 
   validation {
     condition     = can(regex("^(?:(https|http|file)://)+(?:[^/.\\s]+\\.)*", var.source_address))
@@ -18,7 +18,7 @@ variable "source_address" {
 # @label "Destination"
 variable "destination_address" {
   type        = string
-  description = "Specify the seeding destiantion address."
+  description = "Specify the seeding destiantion address, see: https://github.com/seal-io/terraform-provider-byteset/blob/main/docs/resources/pipeline.md#nested-schema-for-destination."
 }
 
 #################
@@ -38,6 +38,7 @@ variable "destination_conn_max" {
   }
 }
 
+# @group "Advanced"
 # @label "Destination Batch Capacity"
 variable "destination_batch_cap" {
   type        = number
