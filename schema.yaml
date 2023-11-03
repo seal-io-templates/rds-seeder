@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI schema for template rds-seeder
+  version: v0.0.1
+components:
+  schemas:
+    variables:
+      type: object
+      required:
+      - destination_address
+      - source_address
+      properties:
+        source_address:
+          title: Source
+          type: string
+          description: Specify the seeding source address started with 'file://' or
+            'http(s)://' schema.
+          x-walrus-ui:
+            group: Basic
+        destination_address:
+          title: Destination
+          type: string
+          description: Specify the seeding destiantion address.
+          x-walrus-ui:
+            group: Basic
+        destination_conn_max:
+          title: Destination Connection Maximum
+          type: number
+          description: Specify the connection maximum value of destination.
+          default: 5
+          x-walrus-ui:
+            group: Advanced
+        destination_batch_cap:
+          title: Destination Batch Capacity
+          type: number
+          description: Specify the (insertion) batch capacity value of destination.
+          default: 500
+          x-walrus-ui:
+            group: Advanced
+        walrus_metadata_project_name:
+          title: walrus_metadata_project_name
+          type: string
+          description: Walrus metadata project name.
+          default: ''
+          x-walrus-ui:
+            hidden: true
+        walrus_metadata_environment_name:
+          title: walrus_metadata_environment_name
+          type: string
+          description: Walrus metadata environment name.
+          default: ''
+          x-walrus-ui:
+            hidden: true
+        walrus_metadata_service_name:
+          title: walrus_metadata_service_name
+          type: string
+          description: Walrus metadata service name.
+          default: ''
+          x-walrus-ui:
+            hidden: true
+
