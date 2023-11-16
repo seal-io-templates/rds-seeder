@@ -4,10 +4,10 @@ info:
 components:
   schemas:
     variables:
-      type: object
       required:
       - destination_address
       - source_address
+      type: object
       properties:
         source_address:
           title: Source
@@ -36,25 +36,28 @@ components:
           default: 500
           x-walrus-ui:
             group: Advanced
-        walrus_metadata_project_name:
-          title: walrus_metadata_project_name
-          type: string
-          description: Walrus metadata project name.
-          default: ''
-          x-walrus-ui:
-            hidden: true
-        walrus_metadata_environment_name:
-          title: walrus_metadata_environment_name
-          type: string
-          description: Walrus metadata environment name.
-          default: ''
-          x-walrus-ui:
-            hidden: true
-        walrus_metadata_service_name:
-          title: walrus_metadata_service_name
-          type: string
-          description: Walrus metadata service name.
-          default: ''
-          x-walrus-ui:
-            hidden: true
+        context:
+          title: Context
+          type: object
+          description: |
+            Receive contextual information. When Walrus deploys, Walrus will inject specific contextual information into this field.
 
+            Examples:
+            ```
+            context:
+              project:
+                name: string
+                id: string
+              environment:
+                name: string
+                id: string
+              resource:
+                name: string
+                id: string
+            ```
+          default: {}
+          additionalProperties:
+            type: object
+          x-walrus-ui:
+            group: Basic
+            hidden: true
